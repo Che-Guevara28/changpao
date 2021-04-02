@@ -8,8 +8,8 @@
 # 4. 跑步结果
 import os
 import requests
-requests.packages.urllib3.disable_warnings
-
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 def load_local_imei_code(file_name='code.txt') -> list:
