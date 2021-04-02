@@ -23,4 +23,4 @@ jobs:
         CORPID: ${{ secrets.CORPID }}
         SECRET: ${{ secrets.SECRET }}
         AGENTID: ${{ secrets.AGENTID }}
-      run: python FakeAipao.py
+      run: python FakeAiPao.py
