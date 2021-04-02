@@ -15,6 +15,7 @@ jobs:
     - name: Install requirements
       run: |
         python -m pip install --upgrade pip #pip install -r requirements.txt
+        pip install requests
     - name: AutoRun
       env:  
         ZXC: 0    #0为不推送，1为企业微信应用消息推送，2为Server酱推送
