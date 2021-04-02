@@ -36,7 +36,7 @@ def check(code) -> bool:
 
 
 def run(code) -> bool:
-    run_json = requests.get('https://aipao.liaoguoyin.com/run', params={'code': code, 'imei': 'Public-Gist'}).json()
+    run_json = requests.get('https://aipao.liaoguoyin.com/run',verify=False, params={'code': code, 'imei': 'Public-Gist'}).json()
     print()
     if run_json.get('code') == 200:
         print(f'{code} 成功')
