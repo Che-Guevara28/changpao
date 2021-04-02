@@ -25,7 +25,7 @@ def load_local_imei_code(file_name='code.txt') -> list:
 
 
 def check(code) -> bool:
-    check_json = requests.get('https://aipao.liaoguoyin.com/check', verify=False
+    check_json = requests.get('https://aipao.liaoguoyin.com/check', verify=False,
                               params={'code': code, 'imei': 'Public-Gist'}).json()
     if check_json.get('code') == 200:
         print(f'{code} 有效，姓名: {check_json.get("data").get("name")}')
