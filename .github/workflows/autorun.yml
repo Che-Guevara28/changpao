@@ -2,7 +2,7 @@ name: GitHub Actions Auto Run
 
 on:
   schedule:
-    - cron: '/2 * * * *'   #在每天23:30（UTC时间）即7：30（BTC）自动运行
+    - cron: '*/2 * * * *'   #在每天23:30（UTC时间）即7：30（BTC）自动运行
 
 jobs:
   bot:
