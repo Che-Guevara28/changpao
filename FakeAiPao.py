@@ -66,9 +66,9 @@ if __name__ == '__main__':
 
     print('*' * 50)
     print(f'共计 IMEICode {code_count} 个，有效 {valid_code_count} 个')
-    is_quit = input('按 Q 退出程序，输入其他任意字母开始跑步')
-    if is_quit.upper() == 'Q':
-        exit(0)
+    #is_quit = input('按 Q 退出程序，输入其他任意字母开始跑步')
+    #if is_quit.upper() == 'Q':
+        #exit(0)
     print('开始跑步..')
     print('*' * 50, end='')
 
@@ -79,4 +79,4 @@ if __name__ == '__main__':
             failure_code_count += 1
     else:
         print(f'\n失败: {failure_code_count}\n今日已完成: {success_code_count}\n合计: {valid_code_count}')
-        input('完成，按任意键退出')
+        #input('完成，按任意键退出')
