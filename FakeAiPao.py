@@ -8,7 +8,8 @@
 # 4. 跑步结果
 import os
 import requests
-warnings.filterwarnings("ignore")
+requests.packages.urllib3.disable_warnings
+
 
 
 def load_local_imei_code(file_name='code.txt') -> list:
