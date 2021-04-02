@@ -129,7 +129,7 @@ def weixin_send(SCKEY, body):
 
 def main():
     try:
-        IMEICode = os.environ['IMEICODE']
+        IMEICode = os.environ['IMEICODE1']
     except KeyError:
         print("未读取到IMEICODE")
         exit(1)
