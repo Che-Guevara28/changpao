@@ -25,7 +25,7 @@ def email(content, address):
     receivers = [address]
     message = MIMEText(content,'plain','utf-8')
     #邮件主题
-    message['Subject'] = '今日有效IMEICODE'
+    message['Subject'] = '今日有效阳光长跑'
     message['From'] = sender
     message['To'] = receivers[0]
     try:
