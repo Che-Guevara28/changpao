@@ -53,7 +53,7 @@ def ChoseEmail(name, content):
     elif name == "平玮":
         email(content,'3256298546@qq.com')
     elif name == "郑忠宇":
-        email(content,'1951506459@qq.com')
+        email(content,'zzy1951506459@163.com')
     elif name == "禹宇帅":
         email(content,'1822403761@qq.com')
     elif name == "张宇霆":
