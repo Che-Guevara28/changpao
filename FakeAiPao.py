@@ -102,8 +102,8 @@ def run(code) -> bool:
         return True
     else:
         if '今天已有有效跑步记录' in run_json.get("message"):
-            if check_json.get("data").get("name") == "郑忠宇":
-                ChoseEmail(check_json.get("data").get("name"),"wow!今日已有跑步记录!")
+            #if check_json.get("data").get("name") == "郑忠宇":
+            #    ChoseEmail(check_json.get("data").get("name"),"wow!今日已有跑步记录!")
             print(f'{code} {run_json.get("message")}', end='')
             return True
         else:
