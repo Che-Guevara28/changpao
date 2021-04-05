@@ -58,6 +58,8 @@ def ChoseEmail(name, content):
         email(content,'1822403761@qq.com')
     elif name == "张宇霆":
         email(content,'479997378@qq.com')
+    elif name == "王纪元":
+        email(content,'3185238135@qq.com')
     else:
         email("ChoseEmail Error",'76946112@qq.com')
         
