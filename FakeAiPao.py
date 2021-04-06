@@ -141,8 +141,10 @@ if __name__ == '__main__':
             
     print('*' * 50)
     print(f'共计 IMEICode {code_count} 个，有效 {valid_code_count} 个')
-                  
+    t1 = time.time()              
     time.sleep(random.randint(1,300))
+    t2 = time.time()
+    print(t2-t1)
     #is_quit = input('按 Q 退出程序，输入其他任意字母开始跑步')
     #if is_quit.upper() == 'Q':
     #    exit(0)
