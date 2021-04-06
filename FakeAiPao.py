@@ -12,6 +12,9 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 import urllib3
 urllib3.disable_warnings()
+#随机时间
+import time
+import random
 #设置邮箱发送
 import smtplib
 from email.mime.text import MIMEText
@@ -93,6 +96,7 @@ def check(code) -> bool:
 
 
 def run(code) -> bool:
+    time.sleep(random.randint(1,30))
     run_json = requests.get('https://aipao.liaoguoyin.com/run',verify=False, params={'code': code, 'imei': 'Public-Gist'}).json()
     print()
     check_json = requests.get('https://aipao.liaoguoyin.com/check', verify=False,
@@ -137,6 +141,8 @@ if __name__ == '__main__':
             
     print('*' * 50)
     print(f'共计 IMEICode {code_count} 个，有效 {valid_code_count} 个')
+                  
+    time.sleep(random.randint(1,300))
     #is_quit = input('按 Q 退出程序，输入其他任意字母开始跑步')
     #if is_quit.upper() == 'Q':
     #    exit(0)
