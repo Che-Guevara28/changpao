@@ -48,7 +48,7 @@ def email(content, address):
 
 def ChoseEmail(name, content):
     if name == "王佳辉":
-        email(content,'76946112@qq.com')
+        email(content,'evan.wjh@outlook.com')
     elif name == "王岩":
         email(content,'1078588437@qq.com')
     elif name == "王奕翔":
