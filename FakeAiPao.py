@@ -63,6 +63,8 @@ def ChoseEmail(name, content):
         email(content,'479997378@qq.com')
     elif name == "王纪元":
         email(content,'3185238135@qq.com')
+    elif name == "孙嘉文":
+        email(content,'912157722@qq.com')
     else:
         email("ChoseEmail Error",'76946112@qq.com')
         
@@ -120,7 +122,7 @@ def run(code) -> bool:
 
 if __name__ == '__main__':
     code_list = load_local_imei_code()
-    name_list = ["王佳辉","王岩","王奕翔","平玮","郑忠宇","禹宇帅","张宇霆"]
+    name_list = ["王佳辉","王岩","王奕翔","平玮","郑忠宇","禹宇帅","张宇霆","孙嘉文"]
     print('*' * 50)
     s = ""
     code_count = len(code_list)
