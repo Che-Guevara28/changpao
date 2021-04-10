@@ -133,7 +133,7 @@ if __name__ == '__main__':
     failure_code_count = 0
     line = 0
     for code in code_list:
-        line++
+        line+=1
         if check(code):
             s+=(code + "\n")
             valid_code_count += 1
