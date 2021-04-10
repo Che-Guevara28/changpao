@@ -98,7 +98,7 @@ def check(code) -> bool:
 
 
 def run(code) -> bool:
-    time.sleep(random.randint(1,30))
+    #time.sleep(random.randint(1,30))
     run_json = requests.get('https://aipao.liaoguoyin.com/run',verify=False, params={'code': code, 'imei': 'Public-Gist'}).json()
     print()
     check_json = requests.get('https://aipao.liaoguoyin.com/check', verify=False,
@@ -131,11 +131,15 @@ if __name__ == '__main__':
     valid_name = []
     success_code_count = 0
     failure_code_count = 0
+    line = 0
     for code in code_list:
+        line++
         if check(code):
             s+=(code + "\n")
             valid_code_count += 1
             valid_code_list.append(code)
+        else:
+            s+=("line" + str(line) + ":\t"code + "\n")
     s+="无效名单：\n"       
     for name in name_list:
         if name not in valid_name:
