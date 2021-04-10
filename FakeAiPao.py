@@ -135,7 +135,7 @@ if __name__ == '__main__':
     for code in code_list:
         line+=1
         if check(code):
-            s+=(code + "\n")
+            
             valid_code_count += 1
             valid_code_list.append(code)
         else:
