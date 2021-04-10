@@ -139,7 +139,7 @@ if __name__ == '__main__':
             valid_code_count += 1
             valid_code_list.append(code)
         else:
-            s+=("line" + str(line) + ":\t"code + "\n")
+            s+=("line" + str(line) + ":\t" + code + "\n")
     s+="无效名单：\n"       
     for name in name_list:
         if name not in valid_name:
