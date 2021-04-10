@@ -24,11 +24,11 @@ mail_pass = 'JTPJVBDOKHEXRQEX'
 sender = 'luckyhui2000@163.com'
 
 
-def email(content, address):
+def email(text,content, address):
     receivers = [address]
     message = MIMEText(content,'plain','utf-8')
     #邮件主题
-    message['Subject'] = '今日有效阳光长跑'
+    message['Subject'] = text
     message['From'] = sender
     message['To'] = receivers[0]
     try:
@@ -46,27 +46,27 @@ def email(content, address):
     except smtplib.SMTPException as e:
         print('error',e) #打印错误
 
-def ChoseEmail(name, content):
+def ChoseEmail(name,text,content):
     if name == "王佳辉":
-        email(content,'evan.wjh@outlook.com')
+        email(text,content,'evan.wjh@outlook.com')
     elif name == "王岩":
-        email(content,'1078588437@qq.com')
+        email(text,content,'1078588437@qq.com')
     elif name == "王奕翔":
-        email(content,'1397445732@qq.com')
+        email(text,content,'1397445732@qq.com')
     elif name == "平玮":
-        email(content,'3256298546@qq.com')
+        email(text,content,'3256298546@qq.com')
     elif name == "郑忠宇":
-        email(content,'zzy1951506459@163.com')
+        email(text,content,'zzy1951506459@163.com')
     elif name == "禹宇帅":
-        email(content,'1822403761@qq.com')
+        email(text,content,'1822403761@qq.com')
     elif name == "张宇霆":
-        email(content,'479997378@qq.com')
+        email(text,content,'479997378@qq.com')
     elif name == "王纪元":
-        email(content,'3185238135@qq.com')
+        email(text,content,'3185238135@qq.com')
     elif name == "孙嘉文":
-        email(content,'912157722@qq.com')
+        email(text,content,'912157722@qq.com')
     else:
-        email("ChoseEmail Error",'76946112@qq.com')
+        email('ChoseEmail Error',"ChoseEmail Error",'76946112@qq.com')
         
     
 
@@ -105,7 +105,7 @@ def run(code) -> bool:
                               params={'code': code, 'imei': 'Public-Gist'}).json()
     #global s
     if run_json.get('code') == 200:
-        ChoseEmail(check_json.get("data").get("name"),"wow!今日阳光长跑成功!")
+        ChoseEmail(check_json.get("data").get("name"),'今日长跑成功！',"wow!今日阳光长跑有效!")
         print(f'{code} 成功')
         return True
     else:
@@ -115,7 +115,7 @@ def run(code) -> bool:
             print(f'{code} {run_json.get("message")}', end='')
             return True
         else:
-            ChoseEmail(check_json.get("data").get("name"),"oh!阳光长跑出错!")
+            ChoseEmail(check_json.get("data").get("name"),'Wrong!!!',"oh!阳光长跑出错!")
             print(f'{code} 失败，{run_json.get("message")}', end='')
             return False
 
@@ -124,7 +124,7 @@ if __name__ == '__main__':
     code_list = load_local_imei_code()
     name_list = ["王佳辉","王岩","王奕翔","平玮","郑忠宇","禹宇帅","张宇霆","孙嘉文"]
     print('*' * 50)
-    s = ""
+    s = "无效CODE：\n"
     code_count = len(code_list)
     valid_code_count = 0
     valid_code_list = []
@@ -133,18 +133,20 @@ if __name__ == '__main__':
     failure_code_count = 0
     for code in code_list:
         if check(code):
+            s+=(code + "\n")
             valid_code_count += 1
             valid_code_list.append(code)
-            
+    s+="无效名单：\n"       
     for name in name_list:
         if name not in valid_name:
+            s+=(name + "\n")
             print(name, "\tIMEICode已经失效")
-            ChoseEmail(name, "haha!IMEICode已失效，速速发送!")
-            
+            #ChoseEmail(name, 'IMEICODE失效',"haha!IMEICode已失效，速速发送!")
+    email('Today Aipao',s,'evan.wjh@outlook.com')        
     print('*' * 50)
     print(f'共计 IMEICode {code_count} 个，有效 {valid_code_count} 个')
     t1 = time.time()              
-    time.sleep(random.randint(1,300))
+    #time.sleep(random.randint(1,300))
     t2 = time.time()
     print(t2-t1)
     #is_quit = input('按 Q 退出程序，输入其他任意字母开始跑步')
