@@ -134,7 +134,7 @@ def run(code) -> bool:
 
 if __name__ == '__main__':
     code_list = load_local_imei_code()
-    name_list = ["平玮","郑忠宇","王佳辉"]
+    name_list = ["平玮","郑忠宇","王佳辉","王纪元"]
     print('*' * 50)
     s = "无效CODE：\n"
     code_count = len(code_list)
@@ -162,7 +162,7 @@ if __name__ == '__main__':
     print('*' * 50)
     print(f'共计 IMEICode {code_count} 个，有效 {valid_code_count} 个')
     t1 = time.time()              
-    time.sleep(random.randint(1,300))
+    # time.sleep(random.randint(1,300))
     t2 = time.time()
     print(t2-t1)
     #is_quit = input('按 Q 退出程序，输入其他任意字母开始跑步')
