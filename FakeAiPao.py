@@ -134,7 +134,7 @@ def run(code) -> bool:
 
 if __name__ == '__main__':
     code_list = load_local_imei_code()
-    name_list = ["王奕翔","张宇霆","孙嘉文","王纪元","马林","马爽","刘雨洋","朱翔堃","吴文轩"]
+    name_list = ["平玮","郑忠宇","王佳辉"]
     print('*' * 50)
     s = "无效CODE：\n"
     code_count = len(code_list)
