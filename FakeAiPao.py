@@ -19,7 +19,7 @@ import random
 import smtplib
 from email.mime.text import MIMEText
 mail_host = 'smtp.163.com'
-mail_user = 'HUI_辉'
+mail_user = 'HUI'
 mail_pass = 'JTPJVBDOKHEXRQEX'
 sender = 'luckyhui2000@163.com'
 
