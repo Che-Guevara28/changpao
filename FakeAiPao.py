@@ -48,7 +48,7 @@ def email(text,content, address):
 
 def ChoseEmail(name,text,content):
     if name == "王佳辉":
-        email(text,content,'evan.wjh@outlook.com')
+        email(text,content,'76946112@qq.com')
     elif name == "王岩":
         email(text,content,'1078588437@qq.com')
     elif name == "王奕翔":
@@ -158,11 +158,11 @@ if __name__ == '__main__':
             s+=(name + "\n")
             print(name, "\tIMEICode已经失效")
             ChoseEmail(name, 'IMEICODE失效',"haha!IMEICode已失效，速速发送!")
-    email('Today Aipao',s,'evan.wjh@outlook.com')        
+    email('Today Aipao',s,'76946112@qq.com')        
     print('*' * 50)
     print(f'共计 IMEICode {code_count} 个，有效 {valid_code_count} 个')
     t1 = time.time()              
-    # time.sleep(random.randint(1,300))
+     time.sleep(random.randint(1,300))
     t2 = time.time()
     print(t2-t1)
     #is_quit = input('按 Q 退出程序，输入其他任意字母开始跑步')
